@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Proyecto_Veterinaria
 {
     public partial class Login : Form
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+        MySqlDataReader dr;
+
         public Login()
         {
             InitializeComponent();
+            con = new MySqlConnection("Server=localhost;Database=pr_titulo;user=root;Pwd='';SslMode=none");
         }
 
         private void usuario_TextChanged(object sender, EventArgs e)
@@ -43,6 +50,45 @@ namespace Proyecto_Veterinaria
                 e.Handled = true;
                 SendKeys.Send("{TAB}");
             }
+        }
+
+        private void ingresar_Click(object sender, EventArgs e)
+        {
+            string user = usuario.Text;
+            string pass = contraseña.Text;
+            cmd = new MySqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM pt_tbusuario where id_usuario='" + usuario.Text + "' AND pas_usuario='" + contraseña.Text + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                string[] row = { dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5) };
+                int rol = dr.GetInt32(5);
+                if (rol == 1)
+                {
+                    this.Hide();
+                    administracion ss = new administracion();
+                    ss.Show();
+                }
+                else if (rol == 2){
+
+                }
+                else if (rol == 3)
+                {
+
+                }
+                else if (rol == 4)
+                {
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid Login please check username and password");
+            }
+            con.Close();
         }
     }
 }
