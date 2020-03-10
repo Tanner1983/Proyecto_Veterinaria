@@ -72,15 +72,21 @@ namespace Proyecto_Veterinaria
                     ss.Show();
                 }
                 else if (rol == 2){
-
+                    this.Hide();
+                    usuario ss = new usuario();
+                    ss.Show();
                 }
                 else if (rol == 3)
                 {
-
+                    this.Hide();
+                    medico ss = new medico();
+                    ss.Show();
                 }
                 else if (rol == 4)
                 {
-
+                    this.Hide();
+                    administracion ss = new administracion();
+                    ss.Show();
                 }
 
             }

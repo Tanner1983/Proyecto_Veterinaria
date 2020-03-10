@@ -16,5 +16,17 @@ namespace Proyecto_Veterinaria
         {
             InitializeComponent();
         }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void especiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Especies ss = new Especies();
+            ss.Show();
+        }
     }
 }

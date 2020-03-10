@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Veterinaria
 {
-    partial class administracion
+    partial class Especies
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,19 @@
             this.eliminarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.TextBox();
+            this.esp = new System.Windows.Forms.TextBox();
+            this.des = new System.Windows.Forms.TextBox();
+            this.ing = new System.Windows.Forms.Button();
+            this.mod = new System.Windows.Forms.Button();
+            this.el = new System.Windows.Forms.Button();
+            this.bus = new System.Windows.Forms.Button();
+            this.dtespecies = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtespecies)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,7 +85,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(882, 28);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // clienteToolStripMenuItem
@@ -121,7 +133,6 @@
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.serviciosToolStripMenuItem.Text = "Servicios";
-            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // ingresarToolStripMenuItem1
             // 
@@ -222,7 +233,6 @@
             this.especiesToolStripMenuItem.Name = "especiesToolStripMenuItem";
             this.especiesToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.especiesToolStripMenuItem.Text = "Especies";
-            this.especiesToolStripMenuItem.Click += new System.EventHandler(this.especiesToolStripMenuItem_Click);
             // 
             // razasToolStripMenuItem
             // 
@@ -265,18 +275,136 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
             this.salirToolStripMenuItem.Text = "                                  ";
             // 
-            // administracion
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Identificador";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Especie";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Descripcion";
+            // 
+            // id
+            // 
+            this.id.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.Location = new System.Drawing.Point(173, 48);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(68, 28);
+            this.id.TabIndex = 5;
+            this.id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_KeyPress);
+            // 
+            // esp
+            // 
+            this.esp.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.esp.Location = new System.Drawing.Point(173, 99);
+            this.esp.Name = "esp";
+            this.esp.Size = new System.Drawing.Size(100, 28);
+            this.esp.TabIndex = 6;
+            this.esp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.esp_KeyPress);
+            // 
+            // des
+            // 
+            this.des.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.des.Location = new System.Drawing.Point(175, 153);
+            this.des.Name = "des";
+            this.des.Size = new System.Drawing.Size(205, 28);
+            this.des.TabIndex = 7;
+            this.des.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.des_KeyPress);
+            // 
+            // ing
+            // 
+            this.ing.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ing.Location = new System.Drawing.Point(22, 258);
+            this.ing.Name = "ing";
+            this.ing.Size = new System.Drawing.Size(144, 44);
+            this.ing.TabIndex = 8;
+            this.ing.Text = "Ingresar";
+            this.ing.UseVisualStyleBackColor = true;
+            this.ing.Click += new System.EventHandler(this.ing_Click);
+            // 
+            // mod
+            // 
+            this.mod.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mod.Location = new System.Drawing.Point(204, 258);
+            this.mod.Name = "mod";
+            this.mod.Size = new System.Drawing.Size(144, 44);
+            this.mod.TabIndex = 9;
+            this.mod.Text = "Modificar";
+            this.mod.UseVisualStyleBackColor = true;
+            // 
+            // el
+            // 
+            this.el.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.el.Location = new System.Drawing.Point(22, 330);
+            this.el.Name = "el";
+            this.el.Size = new System.Drawing.Size(144, 44);
+            this.el.TabIndex = 10;
+            this.el.Text = "Eliminar";
+            this.el.UseVisualStyleBackColor = true;
+            // 
+            // bus
+            // 
+            this.bus.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bus.Location = new System.Drawing.Point(204, 330);
+            this.bus.Name = "bus";
+            this.bus.Size = new System.Drawing.Size(144, 44);
+            this.bus.TabIndex = 11;
+            this.bus.Text = "Buscar";
+            this.bus.UseVisualStyleBackColor = true;
+            // 
+            // dtespecies
+            // 
+            this.dtespecies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtespecies.Location = new System.Drawing.Point(405, 48);
+            this.dtespecies.Name = "dtespecies";
+            this.dtespecies.RowTemplate.Height = 24;
+            this.dtespecies.Size = new System.Drawing.Size(465, 326);
+            this.dtespecies.TabIndex = 12;
+            // 
+            // Especies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 453);
+            this.Controls.Add(this.dtespecies);
+            this.Controls.Add(this.bus);
+            this.Controls.Add(this.el);
+            this.Controls.Add(this.mod);
+            this.Controls.Add(this.ing);
+            this.Controls.Add(this.des);
+            this.Controls.Add(this.esp);
+            this.Controls.Add(this.id);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "administracion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "administracion";
+            this.Name = "Especies";
+            this.Text = "Especies";
+            this.Load += new System.EventHandler(this.Especies_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtespecies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,20 +425,31 @@
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem jaulasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem especiesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem razasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem jaulasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem especiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem razasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.TextBox esp;
+        private System.Windows.Forms.TextBox des;
+        private System.Windows.Forms.Button ing;
+        private System.Windows.Forms.Button mod;
+        private System.Windows.Forms.Button el;
+        private System.Windows.Forms.Button bus;
+        private System.Windows.Forms.DataGridView dtespecies;
     }
 }

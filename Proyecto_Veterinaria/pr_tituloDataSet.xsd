@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="pr_tituloDataSet" targetNamespace="http://tempuri.org/pr_tituloDataSet.xsd" xmlns:mstns="http://tempuri.org/pr_tituloDataSet.xsd" xmlns="http://tempuri.org/pr_tituloDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="pr_tituloConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="pr_tituloConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto_Veterinaria.Properties.Settings.GlobalReference.Default.pr_tituloConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pt_tbespecieTableAdapter" GeneratorDataComponentClassName="pt_tbespecieTableAdapter" Name="pt_tbespecie" UserDataComponentName="pt_tbespecieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="pr_tituloConnectionString (Settings)" DbObjectName="pr_titulo.pt_tbespecie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_especie, nom_especie, des_especie FROM pt_tbespecie</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="pr_tituloDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="pr_tituloDataSet" msprop:Generator_UserDSName="pr_tituloDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pt_tbespecie" msprop:Generator_TableClassName="pt_tbespecieDataTable" msprop:Generator_TableVarName="tablept_tbespecie" msprop:Generator_TablePropName="pt_tbespecie" msprop:Generator_RowDeletingName="pt_tbespecieRowDeleting" msprop:Generator_RowChangingName="pt_tbespecieRowChanging" msprop:Generator_RowEvHandlerName="pt_tbespecieRowChangeEventHandler" msprop:Generator_RowDeletedName="pt_tbespecieRowDeleted" msprop:Generator_UserTableName="pt_tbespecie" msprop:Generator_RowChangedName="pt_tbespecieRowChanged" msprop:Generator_RowEvArgName="pt_tbespecieRowChangeEvent" msprop:Generator_RowClassName="pt_tbespecieRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

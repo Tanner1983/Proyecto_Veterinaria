@@ -53,19 +53,43 @@
     <Compile Include="administracion.Designer.cs">
       <DependentUpon>administracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Especies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especies.Designer.cs">
+      <DependentUpon>Especies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="medico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medico.Designer.cs">
+      <DependentUpon>medico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario.Designer.cs">
+      <DependentUpon>usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="administracion.resx">
       <DependentUpon>administracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Especies.resx">
+      <DependentUpon>Especies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medico.resx">
+      <DependentUpon>medico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +100,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="usuario.resx">
+      <DependentUpon>usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
