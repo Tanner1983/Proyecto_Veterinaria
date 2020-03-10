@@ -67,6 +67,8 @@
             this.el = new System.Windows.Forms.Button();
             this.bus = new System.Windows.Forms.Button();
             this.dtespecies = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtespecies)).BeginInit();
             this.SuspendLayout();
@@ -335,7 +337,7 @@
             // ing
             // 
             this.ing.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ing.Location = new System.Drawing.Point(22, 258);
+            this.ing.Location = new System.Drawing.Point(236, 397);
             this.ing.Name = "ing";
             this.ing.Size = new System.Drawing.Size(144, 44);
             this.ing.TabIndex = 8;
@@ -346,29 +348,31 @@
             // mod
             // 
             this.mod.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod.Location = new System.Drawing.Point(204, 258);
+            this.mod.Location = new System.Drawing.Point(405, 397);
             this.mod.Name = "mod";
             this.mod.Size = new System.Drawing.Size(144, 44);
             this.mod.TabIndex = 9;
             this.mod.Text = "Modificar";
             this.mod.UseVisualStyleBackColor = true;
+            this.mod.Click += new System.EventHandler(this.mod_Click);
             // 
             // el
             // 
             this.el.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.el.Location = new System.Drawing.Point(22, 330);
+            this.el.Location = new System.Drawing.Point(564, 397);
             this.el.Name = "el";
             this.el.Size = new System.Drawing.Size(144, 44);
             this.el.TabIndex = 10;
             this.el.Text = "Eliminar";
             this.el.UseVisualStyleBackColor = true;
+            this.el.Click += new System.EventHandler(this.el_Click);
             // 
             // bus
             // 
             this.bus.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bus.Location = new System.Drawing.Point(204, 330);
+            this.bus.Location = new System.Drawing.Point(255, 46);
             this.bus.Name = "bus";
-            this.bus.Size = new System.Drawing.Size(144, 44);
+            this.bus.Size = new System.Drawing.Size(97, 32);
             this.bus.TabIndex = 11;
             this.bus.Text = "Buscar";
             this.bus.UseVisualStyleBackColor = true;
@@ -381,12 +385,37 @@
             this.dtespecies.RowTemplate.Height = 24;
             this.dtespecies.Size = new System.Drawing.Size(465, 326);
             this.dtespecies.TabIndex = 12;
+            this.dtespecies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtespecies_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(726, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 44);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Volver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(65, 397);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 44);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Limpiar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Especies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 453);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtespecies);
             this.Controls.Add(this.bus);
             this.Controls.Add(this.el);
@@ -451,5 +480,7 @@
         private System.Windows.Forms.Button el;
         private System.Windows.Forms.Button bus;
         private System.Windows.Forms.DataGridView dtespecies;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

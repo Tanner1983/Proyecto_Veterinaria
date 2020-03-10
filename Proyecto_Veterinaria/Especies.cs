@@ -75,10 +75,8 @@ namespace Proyecto_Veterinaria
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
-                    id.Text="";
-                    esp.Text = "";
-                    des.Text = "";
-                    MessageBox.Show("Successfully Inserted");
+                    limpiar();
+                    MessageBox.Show("Agregado Correctamente");
                 }
 
                 con.Close();
@@ -99,6 +97,118 @@ namespace Proyecto_Veterinaria
             DataSet ds = new DataSet();
             da.Fill(ds);
             dtespecies.DataSource = ds.Tables[0];
+        }
+
+        private void limpiar()
+        {
+            id.Text = "";
+            esp.Text = "";
+            des.Text = "";
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            administracion ss = new administracion();
+            ss.Show();
+        }
+
+        private void dtespecies_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id.Enabled = false;
+            id.Text = Convert.ToString(dtespecies.Rows[dtespecies.CurrentCellAddress.Y].Cells[0].Value);
+            esp.Text = Convert.ToString(dtespecies.Rows[dtespecies.CurrentCellAddress.Y].Cells[1].Value);
+            des.Text = Convert.ToString(dtespecies.Rows[dtespecies.CurrentCellAddress.Y].Cells[2].Value);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void el_Click(object sender, EventArgs e)
+        {
+            int ids = Convert.ToInt32(id.Text);
+            delete(ids);
+        }
+
+        private void delete(int id)
+        {
+            //SQLSTMT
+            string sql = "DELETE FROM pt_tbespecie WHERE id_especie=" + id + "";
+            cmd = new MySqlCommand(sql, con);
+
+            //'OPEN CON,EXECUTE DELETE,CLOSE CON
+            try
+            {
+                con.Open();
+                MessageBox.Show(con.State.ToString());
+                adapter = new MySqlDataAdapter(cmd);
+
+                adapter.DeleteCommand = con.CreateCommand();
+
+                adapter.DeleteCommand.CommandText = sql;
+
+                //PROMPT FOR CONFIRMATION
+                if (MessageBox.Show("Estas seguro ??", "Borrar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        limpiar();
+                        MessageBox.Show("Eliminado Correctamente");
+                    }
+                }
+
+                con.Close();
+
+                retrieve();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+
+        }
+
+        private void mod_Click(object sender, EventArgs e)
+        {
+            int ids = Convert.ToInt32(id.Text);
+            string name = esp.Text;
+            string desc = des.Text;
+            update(ids,name,desc);
+        }
+
+        private void update(int id, string name, string des)
+        {
+            //SQL STMT
+            string sql = "UPDATE pt_tbespecie SET nom_especie='" + name + "',des_especie='" + des + "' WHERE id_especie=" + id + "";
+            cmd = new MySqlCommand(sql, con);
+
+            //OPEN CON,UPDATE,RETRIEVE DGVIEW
+            try
+            {
+                con.Open();
+                adapter = new MySqlDataAdapter(cmd);
+
+                adapter.UpdateCommand = con.CreateCommand();
+                adapter.UpdateCommand.CommandText = sql;
+
+                if (adapter.UpdateCommand.ExecuteNonQuery() > 0)
+                {
+                    limpiar();
+                    MessageBox.Show("Actualizado Correctamente");
+                }
+
+                con.Close();
+
+                retrieve();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+
         }
     }
 }
