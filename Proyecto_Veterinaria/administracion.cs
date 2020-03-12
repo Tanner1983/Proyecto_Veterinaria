@@ -19,13 +19,22 @@ namespace Proyecto_Veterinaria
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            servicios ss = new servicios();
+            ss.Show();
         }
 
         private void especiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Especies ss = new Especies();
+            ss.Show();
+        }
+
+        private void jaulasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Jaulas ss = new Jaulas();
             ss.Show();
         }
     }

@@ -35,26 +35,10 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.jaulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.especiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.razasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -113,109 +97,23 @@
             // 
             // serviciosToolStripMenuItem
             // 
-            this.serviciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem1,
-            this.modificarToolStripMenuItem1,
-            this.eliminarToolStripMenuItem1,
-            this.buscarToolStripMenuItem1});
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
-            // ingresarToolStripMenuItem1
-            // 
-            this.ingresarToolStripMenuItem1.Name = "ingresarToolStripMenuItem1";
-            this.ingresarToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
-            this.ingresarToolStripMenuItem1.Text = "Ingresar";
-            // 
-            // modificarToolStripMenuItem1
-            // 
-            this.modificarToolStripMenuItem1.Name = "modificarToolStripMenuItem1";
-            this.modificarToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
-            this.modificarToolStripMenuItem1.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem1
-            // 
-            this.eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
-            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
-            this.eliminarToolStripMenuItem1.Text = "Eliminar";
-            // 
-            // buscarToolStripMenuItem1
-            // 
-            this.buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
-            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
-            this.buscarToolStripMenuItem1.Text = "Buscar";
-            // 
             // productosToolStripMenuItem
             // 
-            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem2,
-            this.modificarToolStripMenuItem2,
-            this.eliminarToolStripMenuItem2,
-            this.buscarToolStripMenuItem2});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
-            // ingresarToolStripMenuItem2
-            // 
-            this.ingresarToolStripMenuItem2.Name = "ingresarToolStripMenuItem2";
-            this.ingresarToolStripMenuItem2.Size = new System.Drawing.Size(148, 26);
-            this.ingresarToolStripMenuItem2.Text = "Ingresar";
-            // 
-            // modificarToolStripMenuItem2
-            // 
-            this.modificarToolStripMenuItem2.Name = "modificarToolStripMenuItem2";
-            this.modificarToolStripMenuItem2.Size = new System.Drawing.Size(148, 26);
-            this.modificarToolStripMenuItem2.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem2
-            // 
-            this.eliminarToolStripMenuItem2.Name = "eliminarToolStripMenuItem2";
-            this.eliminarToolStripMenuItem2.Size = new System.Drawing.Size(148, 26);
-            this.eliminarToolStripMenuItem2.Text = "Eliminar";
-            // 
-            // buscarToolStripMenuItem2
-            // 
-            this.buscarToolStripMenuItem2.Name = "buscarToolStripMenuItem2";
-            this.buscarToolStripMenuItem2.Size = new System.Drawing.Size(148, 26);
-            this.buscarToolStripMenuItem2.Text = "Buscar";
-            // 
             // jaulasToolStripMenuItem
             // 
-            this.jaulasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem3,
-            this.modificarToolStripMenuItem3,
-            this.eliminarToolStripMenuItem3,
-            this.buscarToolStripMenuItem3});
             this.jaulasToolStripMenuItem.Name = "jaulasToolStripMenuItem";
             this.jaulasToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.jaulasToolStripMenuItem.Text = "Jaulas";
-            // 
-            // ingresarToolStripMenuItem3
-            // 
-            this.ingresarToolStripMenuItem3.Name = "ingresarToolStripMenuItem3";
-            this.ingresarToolStripMenuItem3.Size = new System.Drawing.Size(148, 26);
-            this.ingresarToolStripMenuItem3.Text = "Ingresar";
-            // 
-            // modificarToolStripMenuItem3
-            // 
-            this.modificarToolStripMenuItem3.Name = "modificarToolStripMenuItem3";
-            this.modificarToolStripMenuItem3.Size = new System.Drawing.Size(148, 26);
-            this.modificarToolStripMenuItem3.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem3
-            // 
-            this.eliminarToolStripMenuItem3.Name = "eliminarToolStripMenuItem3";
-            this.eliminarToolStripMenuItem3.Size = new System.Drawing.Size(148, 26);
-            this.eliminarToolStripMenuItem3.Text = "Eliminar";
-            // 
-            // buscarToolStripMenuItem3
-            // 
-            this.buscarToolStripMenuItem3.Name = "buscarToolStripMenuItem3";
-            this.buscarToolStripMenuItem3.Size = new System.Drawing.Size(148, 26);
-            this.buscarToolStripMenuItem3.Text = "Buscar";
+            this.jaulasToolStripMenuItem.Click += new System.EventHandler(this.jaulasToolStripMenuItem_Click);
             // 
             // especiesToolStripMenuItem
             // 
@@ -226,38 +124,9 @@
             // 
             // razasToolStripMenuItem
             // 
-            this.razasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem5,
-            this.modificarToolStripMenuItem5,
-            this.eliminarToolStripMenuItem5,
-            this.buscarToolStripMenuItem5});
             this.razasToolStripMenuItem.Name = "razasToolStripMenuItem";
             this.razasToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.razasToolStripMenuItem.Text = "Razas";
-            // 
-            // ingresarToolStripMenuItem5
-            // 
-            this.ingresarToolStripMenuItem5.Name = "ingresarToolStripMenuItem5";
-            this.ingresarToolStripMenuItem5.Size = new System.Drawing.Size(148, 26);
-            this.ingresarToolStripMenuItem5.Text = "Ingresar";
-            // 
-            // modificarToolStripMenuItem5
-            // 
-            this.modificarToolStripMenuItem5.Name = "modificarToolStripMenuItem5";
-            this.modificarToolStripMenuItem5.Size = new System.Drawing.Size(148, 26);
-            this.modificarToolStripMenuItem5.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem5
-            // 
-            this.eliminarToolStripMenuItem5.Name = "eliminarToolStripMenuItem5";
-            this.eliminarToolStripMenuItem5.Size = new System.Drawing.Size(148, 26);
-            this.eliminarToolStripMenuItem5.Text = "Eliminar";
-            // 
-            // buscarToolStripMenuItem5
-            // 
-            this.buscarToolStripMenuItem5.Name = "buscarToolStripMenuItem5";
-            this.buscarToolStripMenuItem5.Size = new System.Drawing.Size(148, 26);
-            this.buscarToolStripMenuItem5.Text = "Buscar";
             // 
             // salirToolStripMenuItem
             // 
@@ -291,26 +160,10 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem jaulasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem especiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem razasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem5;
     }
 }

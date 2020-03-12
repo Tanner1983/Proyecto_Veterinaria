@@ -429,6 +429,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Especies";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Especies";
             this.Load += new System.EventHandler(this.Especies_Load);
             this.menuStrip1.ResumeLayout(false);
